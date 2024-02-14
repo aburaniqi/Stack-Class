@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Stack-Class:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Stack_Class_jar</output-path>
+    <root id="archive" name="Stack-Class.jar">
+      <element id="module-output" name="Stack-Class" />
+    </root>
+  </artifact>
+</component>

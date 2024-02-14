@@ -1,10 +1,10 @@
 public class Stack <T>{
-    private static final int capacity = 10;
+    private static final int CAPACITY = 10;
     private Object[] array;
     private int size;
 
     public Stack(){
-        this(capacity);
+        this(CAPACITY);
     }
 
     public Stack(int capacity){
@@ -23,21 +23,24 @@ public class Stack <T>{
         if(size == 0){
             throw new StackEmptyException("Stack is empty");
         }
-        return (T) this.array[--size];
+        T t = (T) this.array[--size];
+        return t;
     }
 
     public T peek() throws StackEmptyException{
+
         if(size == 0){
             throw new StackEmptyException("Stack is empty");
         }
         return (T) this.array[size - 1];
     }
 
-    public String list(){
+    public String list() {
         String out = "";
-        for (int i = 0; i < size; i++) {
+        for (int i = size - 1; i >= 0; i--) {
             out += this.array[i] + "; ";
         }
         return out;
     }
+
 }
